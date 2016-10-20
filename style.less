@@ -20,11 +20,21 @@ body {
 	border-bottom: 1px solid #e0e0e0;
 	color:#636363;
 	.logo {
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+			&:focus {
+				text-decoration: none;
+			}
+			&:active {
+				text-decoration: none;
+			}
+		}
 		h1 {
 			letter-spacing: 0.5em;
 			font-family: 'dosislight';
 			font-size: 3.5em;
-			
 			margin:10px;
 		}
 		float:left;
@@ -403,6 +413,17 @@ section {
 		}
 	}
 }
+
+.fading-success {
+	padding: 10px;
+	background:transparent;
+	animation: fadeout 10s;
+	
+}
+@keyframes fadeout {
+		from {background-color: #dff0d8;}
+		to {background-color: transparent;}
+	}
 /* extra util */
 .hidden-xxs {
 	@media (max-width:437px) {

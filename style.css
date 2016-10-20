@@ -20,6 +20,15 @@ body.dey {
 .nav-bar .logo {
   float: left;
 }
+.nav-bar .logo a:hover {
+  text-decoration: none;
+}
+.nav-bar .logo a:focus {
+  text-decoration: none;
+}
+.nav-bar .logo a:active {
+  text-decoration: none;
+}
 .nav-bar .logo h1 {
   letter-spacing: 0.5em;
   font-family: 'dosislight';
@@ -367,6 +376,19 @@ section .arrow2:after {
 }
 .section-about .subheader:after {
   display: none;
+}
+.fading-success {
+  padding: 10px;
+  background: transparent;
+  animation: fadeout 10s;
+}
+@keyframes fadeout {
+  from {
+    background-color: #dff0d8;
+  }
+  to {
+    background-color: transparent;
+  }
 }
 /* extra util */
 @media (max-width: 437px) {

@@ -28,7 +28,7 @@
 			<ul class="left-nav">
 				<li><a id="menutoggle"><i class="flaticon-bars"></i></a></li>
 			</ul>
-			<div class="logo"><h1>DEY</h1></div>
+			<div class="logo"><a href="http://www.ossianlindblad.se/dey"><h1>DEY</h1></a></div>
 			<div class="nav-links expanded">
 				<ul class="nav nav-pills">
 					<li role="presentation"><a href="#products"><?php echo $xml->$lang->menu->products; ?></a></li>
@@ -183,42 +183,59 @@
 						</div>
 					</div>
 				</div>
+				<?php
+					include "c/contact.php";
+				?>
 				<div class="col-md-7">
-					<form class="form-horizontal">
+					<?php
+						if($contact_success) {
+							echo '<div class="row">
+						<div class="col-sm-offset-3 col-sm-9">
+							<p class="fading-success">Message sent!</p>
+						</div>
+					</div>';
+						}
+					?>
+					<form class="form-horizontal" role="form" method="post" action="#contact">
 						<div class="form-group">
 							<label for="contactCompany" class="col-sm-3 control-label">Company:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="contactCompany" placeholder="Company">
+								<input type="text" class="form-control" name="company" id="contactCompany" placeholder="Company">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="contactName" class="col-sm-3 control-label">Name:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="contactName" placeholder="Name">
+								<input type="text" class="form-control" name="name" id="contactName" placeholder="Name">
+								<?php if($nameErr) {echo '<p class="text-danger">Name field is empty or invalid.</p>';} ?>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="contactEmail" class="col-sm-3 control-label">Email Address:</label>
 							<div class="col-sm-9">
-								<input type="email" class="form-control" id="contactEmail" placeholder="Email">
+								<input type="email" class="form-control" name="email" id="contactEmail" placeholder="Email">
+								<?php if($emailErr) {echo '<p class="text-danger">Email field is empty or invalid.</p>';} ?>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="contactMsg" class="col-sm-3 control-label">Message:</label>
 							<div class="col-sm-9">
-								<textarea class="form-control" id="contactMsg" rows="3"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-9">
-								<button type="submit" class="btn btn-light"><span>Submit</span></button>
+								<textarea class="form-control" name="msg" id="contactMsg" rows="3"><?php echo $msg_memory; ?></textarea>
+								<?php if($msgErr) {echo '<p class="text-danger">Message field is empty or invalid.</p>';} ?>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<div class="g-recaptcha" data-sitekey="6LfJ0QkUAAAAAJ9fJ7NV7n0CotE6U411Rld2Bkli"></div>
+								<?php if($capErr) {echo '<p class="text-danger">Didnt pass capatcha.</p>';} ?>
 							</div>
 						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9">
+								<button type="submit" name="submit" class="btn btn-light"><span>Submit</span></button>
+							</div>
+						</div>
+
 					</form>
 				</div>
 			</div>
