@@ -1,0 +1,49 @@
+<lang>
+
+	<en>
+		<menu>
+			<products>Products</products>
+			<quality>Quality</quality>
+			<about>About Us</about>
+			<contact>Contact</contact>
+		</menu>
+		
+		<products>
+			<title>Products</title>
+			<text>We supply a large variety of aftermarket squeegees for: Tennant, Nilfisk-Advance, Nilfisk-Alto, OMM, Taski, Numatic, Ghibli, 	Fimap, CTM/Lavor, Wetrok, Dulevo, Comac, Cleanfix, Hako and Fiorentini.</text>
+			<text>We can deliver squeegees in PVC, Polyurethane, PARA natural rubber, EPDM as well as other special elastomers.</text>
+		</products>
+		<quality>
+			<title>Quality</title>
+			<text>Unique to out services are our high quality products in combination with flexibility. This includes providing quantities, both small and large, as well as giving expert advise to our customers when needed.</text>
+		</quality>
+		<about>
+			<title>About Us</title>
+			<text>DEY Consult is a Swedish company located in Stockholm.</text>
+			<text>With extensive experience in producing and supplying elastomere products to the cleaning industry, we have specialized ourselves in supplying quality squeegees both home and abroad.</text>
+		</about>
+	</en>
+
+	<de>
+		<menu>
+			<products>Products</products>
+			<quality>Quality</quality>
+			<about>About Us</about>
+			<contact>Contact</contact>
+		</menu>
+		<products>
+			<title>Products</title>
+			<text>Wir bieten eine  grosse Vielfalt an aftermarket Sauglippen für: Tennant, Nilfisk-Advance, Nilfisk-Alto, OMM, Taski, Numatic, Ghibli, Fimap, CTM/Lavor, Wetrok, Dulevo, Comac, Cleanfix, Hako und Fiorentini.</text>
+			<text>Wir bieten diese Sauglippen in PVC, Polyurethan, PARA Naturgummi, EPDM, als auch in anderen Spezialgummis an.</text>
+		</products>
+		<quality>
+			<title>Quality</title>
+			<text>Was uns zu einem einzigartigen Unternehmen macht, ist die hochwertige Qualität der angebotenen Produkte und die Flexibilität unserer Dienstleistungen. Unsere Kunden haben die Möglichkeit je nach Bedarf in kleinen, sowie in grossen Mengen zu bestellen. Zudem bieten wir unseren Kunden jederzeit fachliche Beratung an.</text>
+		</quality>
+		<about>
+			<title>Unternehmen</title>
+			<text>DEY Consult ist ein Schwedisches Unternehmen mit Sitz in Stockholm.</text>
+			<text>Unser Team verfügt über umfangreiche Kenntnisse im Bereich der Produktion, sowie des Vertriebes von Gummiprodukten, speziell für die Reinigungsindustrie. Hierbei haben wir uns vor allem auf den Handel von hochwertigen Sauglippen, auf nationaler, als auch auf internationaler Ebene, spezialisiert.</text>
+		</about>
+	</de>
+</lang>

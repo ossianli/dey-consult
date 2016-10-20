@@ -1,0 +1,73 @@
+<!--
+
+### DEY MAIN HERO
+
+-->
+
+<dom-module id="main-hero">
+	<template>
+
+		<style>
+			:host {
+				display: block;
+			}
+			.container-fluid {
+				padding:0;
+			}
+			.hero-wrapper {
+				position: relative;
+				overflow: hidden;
+			}
+			.hero-overlay {
+				position: absolute;
+				top:50%;
+				transform:translateY(-50%);
+				text-align: center;
+				width: 100%;
+			}
+			h1 {
+				text-transform: uppercase;
+				letter-spacing: 0.2em;
+				margin-bottom:0;
+				text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+			}
+			h3 {
+				margin-top:0;
+				text-transform: uppercase;
+				letter-spacing: 0.2em;
+				text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+			}
+		</style>
+		
+		<div class="container-fluid">
+			<div class="hero-wrapper">
+				<div class="img-container">
+					<img alt="Img" class="img-responsive" src="{{img}}"> 
+				</div>
+				<div class="hero-overlay">
+					<h1>{{title}}</h1>
+					<h3>{{text}}</h3>
+				</div>
+			</div>
+		</div>
+
+	</template>
+	<script>
+		Polymer({
+			is: 'main-hero',
+			properties: {
+				title: {
+					type: String,
+				},
+				img: {
+					type: String
+				},
+				text: String,
+				btn: Boolean,
+				btnText: String,
+				btnUrl: String
+			},
+
+		});
+	</script>
+</dom-module>
