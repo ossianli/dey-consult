@@ -19,6 +19,7 @@
 	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 	<link rel="import" href="imports.html">
 	<title>DEY</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body class="dey">
@@ -211,6 +212,11 @@
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button type="submit" class="btn btn-light"><span>Submit</span></button>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9">
+								<div class="g-recaptcha" data-sitekey="6LfJ0QkUAAAAAJ9fJ7NV7n0CotE6U411Rld2Bkli"></div>
 							</div>
 						</div>
 					</form>
