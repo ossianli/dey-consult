@@ -82,19 +82,8 @@ body {
 			}
 		}
 
-		/*@media (max-width: 992px) {
-			position:fixed;
-			top:80px;
-			left:0;
-			right:0;
-			//background-color: #3b3e43;
-			display:none;
-		}*/
 
 		ul {
-			/*@media (max-width: 992px) {
-				width:100%;
-			}*/
 			float:left;
 			&.nav-pills {
 				li {
@@ -117,24 +106,7 @@ body {
 						
 					}
 					margin-left: 0 !important;
-					/*@media (max-width: 992px) {
-						float:none;
-						text-align: center;
-						margin-left: 0 !important;
-						&:nth-child(odd) {
-							background-color: #5a6069;
-						}
-						&:nth-child(even) {
-							background-color: #484d54;
-						}
-					}*/
 					a {
-						
-						/*@media (max-width: 992px) {
-							padding:10px 0;
-							height:auto;
-							border-bottom: 0px;
-						}*/
 						color:#333;
 						border-radius: 0!important;
 
@@ -142,10 +114,6 @@ body {
 						letter-spacing: 0.1em;
 						border-bottom: 0px solid #cc1c1c;
 						&:hover {
-							/*@media (max-width: 992px) {
-								border-bottom:0px;
-							}*/
-							//color:#000;
 							background-color: transparent;
 						}
 						&:focus {
@@ -245,7 +213,6 @@ body {
 		overflow: hidden;
 		background-color: transparent;
 		&:hover {
-			//border:1px solid #bfbfbf;
 			
 			&:after {
 				height: 100%;
@@ -411,6 +378,19 @@ section {
 	background-color: rgba(51, 122, 183, 0.8);
 }
 /* Specifics */
+.section-hero {
+	background-image: url("i/sthlm.jpg");
+	background-position: center;
+	background-size: cover;
+	color:#fff;
+	.subheader {
+		border-bottom: 0px;
+		&:after {
+			display: none;
+		}
+	}
+
+}
 .section-about {
 	background-image: url("i/sthlm.jpg");
 	background-position: center;

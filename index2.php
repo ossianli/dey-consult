@@ -1,16 +1,10 @@
 ﻿<?php
-	$xml = simplexml_load_file("l/lang.xml") or die("Error");
-	echo $xml;
+	// Iterate trough lang->*lang* in xml, check if set matches. Else set to en.
+	$xml = simplexml_load_file("l/lang.xml") or die();
 	if(isset($_GET["l"])) {
-		switch($_GET["l"]) {
-			case "en":
-				$lang = "en";
-				break;
-			case "de":
-				$lang = "de";
-				break;
-			default:
-				$lang = "en";
+		foreach ($xml->children() as $child) {
+			if($child->getName() == $_GET['l'])
+				$lang = $_GET['l'];
 		}
 	} else {
 		$lang = "en";
@@ -51,14 +45,17 @@
   						</button>
   						<ul class="dropdown-menu lang-selection">
   							<?php
-  								if($lang != "en")
+  								foreach($xml->children() as $child) {
+  									echo '<li><a href="?l=' . $child.getName() . '"><img width="16px" height="16px" src="i/' . $child.getName() . '"></a></li>';
+  								}
+  								/*if($lang != "en")
   									echo '<li><a href="?l=en"><img width="16px" height="16px" src="i/en.png"></a></li>';
   								if($lang != "se")
   									echo '<li><a href="?l=se"><img width="16px" height="16px" src="i/se.png"></a></li>';
   								if($lang != "de")
   									echo '<li><a href="?l=de"><img width="16px" height="16px" src="i/de.png"></a></li>';
   								if($lang != "tr")
-  									echo '<li><a href="?l=tr"><img width="16px" height="16px" src="i/tr.png"></a></li>';
+  									echo '<li><a href="?l=tr"><img width="16px" height="16px" src="i/tr.png"></a></li>';*/
   							?>
   						</ul>
 					</div>
@@ -74,10 +71,19 @@
 			</ul>
 		</div>
 	</nav>
-	<section class="no-gutter">
-		<main-hero title="Tailored Solutions" text="Reliabilty equals uptime" img="i/sthlm.jpg">
-		</main-hero>
-				<div class="arrow2"></div>
+	<section class="section-hero">
+		<div class="container">
+			<div class="subheader text-center">
+				<h1>Your quality Squeegee Supplier</h1>
+			</div>
+			<div class="panel alpha">
+				<div class="panel-body">
+					<p>Contact us for expert advise and a personalized service.</p>
+					<p>We can aid you in Turkish, Swedish, German and English.</p>
+				</div>
+			</div>
+		</div>
+		<div class="arrow2"></div>
 	</section>
 	<section>
 		<div class="arrow2"></div>

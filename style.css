@@ -26,16 +26,6 @@ body.dey {
   font-size: 3.5em;
   margin: 10px;
 }
-.nav-bar .nav-links {
-  /*@media (max-width: 992px) {
-			position:fixed;
-			top:80px;
-			left:0;
-			right:0;
-			//background-color: #3b3e43;
-			display:none;
-		}*/
-}
 .nav-bar .nav-links.condensed {
   box-shadow: 0 2px 1em rgba(0, 0, 0, 0.2);
   -webkit-transition: max-height 0.5s ease;
@@ -87,24 +77,10 @@ body.dey {
   height: 80px;
 }
 .nav-bar .nav-links ul {
-  /*@media (max-width: 992px) {
-				width:100%;
-			}*/
   float: left;
 }
 .nav-bar .nav-links ul.nav-pills li {
   margin-left: 0 !important;
-  /*@media (max-width: 992px) {
-						float:none;
-						text-align: center;
-						margin-left: 0 !important;
-						&:nth-child(odd) {
-							background-color: #5a6069;
-						}
-						&:nth-child(even) {
-							background-color: #484d54;
-						}
-					}*/
 }
 .nav-bar .nav-links ul.nav-pills li:before {
   content: '';
@@ -121,11 +97,6 @@ body.dey {
   height: 100%;
 }
 .nav-bar .nav-links ul.nav-pills li a {
-  /*@media (max-width: 992px) {
-							padding:10px 0;
-							height:auto;
-							border-bottom: 0px;
-						}*/
   color: #333;
   border-radius: 0!important;
   font-family: 'open_sansregular';
@@ -133,9 +104,6 @@ body.dey {
   border-bottom: 0px solid #cc1c1c;
 }
 .nav-bar .nav-links ul.nav-pills li a:hover {
-  /*@media (max-width: 992px) {
-								border-bottom:0px;
-							}*/
   background-color: transparent;
 }
 .nav-bar .nav-links ul.nav-pills li a:focus {
@@ -376,6 +344,18 @@ section .arrow2:after {
   background-color: rgba(51, 122, 183, 0.8);
 }
 /* Specifics */
+.section-hero {
+  background-image: url("i/sthlm.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.section-hero .subheader {
+  border-bottom: 0px;
+}
+.section-hero .subheader:after {
+  display: none;
+}
 .section-about {
   background-image: url("i/sthlm.jpg");
   background-position: center;
