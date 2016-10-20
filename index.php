@@ -3,7 +3,7 @@
 	$xml = simplexml_load_file("l/lang.xml") or die();
 	if(isset($_GET["l"])) {
 		foreach ($xml->children() as $child) {
-			if($child->getName() == $_GET['l'])
+			if(($child->getName()) == $_GET['l'])
 				$lang = $_GET['l'];
 		}
 	} else {
@@ -46,16 +46,8 @@
   						<ul class="dropdown-menu lang-selection">
   							<?php
   								foreach($xml->children() as $child) {
-  									echo '<li><a href="?l=' . $child.getName() . '"><img width="16px" height="16px" src="i/' . $child.getName() . '"></a></li>';
+  									echo '<li><a href="?l=' . $child->getName() . '"><img width="16px" height="16px" src="i/' . $child->getName() . '.png"></a></li>';
   								}
-  								/*if($lang != "en")
-  									echo '<li><a href="?l=en"><img width="16px" height="16px" src="i/en.png"></a></li>';
-  								if($lang != "se")
-  									echo '<li><a href="?l=se"><img width="16px" height="16px" src="i/se.png"></a></li>';
-  								if($lang != "de")
-  									echo '<li><a href="?l=de"><img width="16px" height="16px" src="i/de.png"></a></li>';
-  								if($lang != "tr")
-  									echo '<li><a href="?l=tr"><img width="16px" height="16px" src="i/tr.png"></a></li>';*/
   							?>
   						</ul>
 					</div>
@@ -226,23 +218,6 @@
 			</div>
 		</div>
 	</section>
-	<script>
-		/*$(window).resize(function() {
-			console.log($(document).width());
-			if($(window).width() > 975) // Inclu
-				$('.nav-links').removeAttr('style');
-		});*/
-
-		// Test this out in all browsers. Dont want unexpected behavior with !important
-		$('#menutoggle').click(function() {
-			$('.nav-links.condensed').toggleClass('open');
-		});
-
-		$('.nav-pills', '.nav-links.condensed').children().click(function() {
-			$('.nav-links.condensed').removeClass('open');
-		})
-
-	</script>
 </body>
 
 </html>
