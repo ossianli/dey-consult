@@ -19,7 +19,7 @@
 	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 	<link rel="import" href="imports.html">
 	<title>DEY</title>
-	<!--<script src='https://www.google.com/recaptcha/api.js'></script> CAPATCHA OFF-->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body class="dey">
@@ -34,7 +34,8 @@
   						<ul class="dropdown-menu lang-selection">
   							<?php
   								foreach($xml->children() as $child) {
-  									echo '<li><a href="?l=' . $child->getName() . '"><img width="16px" height="16px" src="i/' . $child->getName() . '.png"></a></li>';
+  									if(!($child->getName() == $lang))
+  										echo '<li><a href="?l=' . $child->getName() . '"><img width="16px" height="16px" src="i/' . $child->getName() . '.png"></a></li>';
   								}
   							?>
   						</ul>
@@ -224,12 +225,12 @@
 								<?php if($msgErr) {echo '<p class="text-danger">Message field is empty or invalid.</p>';} ?>
 							</div>
 						</div>
-						<!-- CAPATCHA OFF <div class="form-group">
+						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<div class="g-recaptcha" data-sitekey="6LfJ0QkUAAAAAJ9fJ7NV7n0CotE6U411Rld2Bkli"></div>
 								<?php if($capErr) {echo '<p class="text-danger">Didnt pass capatcha.</p>';} ?>
 							</div>
-						</div>-->
+						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button type="submit" name="submit" class="btn btn-light"><span>Submit</span></button>

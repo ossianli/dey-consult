@@ -11,7 +11,7 @@ body {
 .nav-bar-static {
 	position: relative;
 	width: 100%;
-	padding:60px 0;
+	padding:80px 0 60px;
 
 	.logo {
 		a {
@@ -90,13 +90,30 @@ body {
 	top:0;
 	left:0;
 	right:0;
-	padding-top:10px;
+	padding-bottom:2px;
+	box-shadow: 0 0 8px rgba(0,0,0,0.1);
 	.lang-drop {
 		float:right;
+		.open {
+			.btn {
+				box-shadow: none;
+			}
+		}
+		.btn {
+			border:0px;
+			&:hover {
+				background-color: #eee;
+			}
+			&:after {
+				display: none;
+			}
+		}
 		.lang-selection {
 			min-width: 0;
 			border-radius: 0;
 			padding: 0;
+			border:0px;
+			box-shadow: 0 7px 10px rgba(0,0,0,.175);
 			li {
 				padding:0;
 				a {
