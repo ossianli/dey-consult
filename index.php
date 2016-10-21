@@ -19,28 +19,15 @@
 	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 	<link rel="import" href="imports.html">
 	<title>DEY</title>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!--<script src='https://www.google.com/recaptcha/api.js'></script> CAPATCHA OFF-->
 </head>
 
 <body class="dey">
-	<nav class="nav-bar">
+
+	<div class="nav-bar-lang">
 		<div class="container">
-			<ul class="left-nav">
-				<li><a id="menutoggle"><i class="flaticon-bars"></i></a></li>
-			</ul>
-			<div class="logo"><a href="http://www.ossianlindblad.se/dey"><h1>DEY</h1></a></div>
-			<div class="nav-links expanded">
-				<ul class="nav nav-pills">
-					<li role="presentation"><a href="#products"><?php echo $xml->$lang->menu->products; ?></a></li>
-					<li role="presentation"><a href="#quality"><?php echo $xml->$lang->menu->quality; ?></a></li>
-					<li role="presentation"><a href="#about"><?php echo $xml->$lang->menu->about; ?></a></li>
-					<li role="presentation" class="visible-xxs"><a href="#contact"><?php echo $xml->$lang->menu->contact; ?></a></li>
-				</ul>
-			</div>
-			<ul class="right-nav">
-					<li class="hidden-xs">070-351 53 77</li>
-					<li class="hidden-xxs"><a href="#contact" class="btn btn-light"><span><?php echo $xml->$lang->menu->contact; ?></span></a></li>
-					<li><div class="btn-group">
+			<div class="lang-drop">
+				<div class="btn-group">
   						<button class="btn btn-light sm rectangular dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true aria-expanded="false">
     						<span><img width="16px" height="16px" src="i/<?php echo $lang; ?>.png"><span class="caret"></span></span>
   						</button>
@@ -51,20 +38,33 @@
   								}
   							?>
   						</ul>
-					</div>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
-		<div class="nav-links condensed">
-			<ul class="nav nav-pills">
-				<li role="presentation"><a href="#products"><?php echo $xml->$lang->menu->products; ?></a></li>
-				<li role="presentation"><a href="#quality"><?php echo $xml->$lang->menu->quality; ?></a></li>
-				<li role="presentation"><a href="#about"><?php echo $xml->$lang->menu->about; ?></a></li>
-				<li role="presentation" class="visible-xxs"><a href="#contact"><?php echo $xml->$lang->menu->contact; ?></a></li>
-			</ul>
+	</div>
+
+	<div class="tmp-correcct"></div>
+
+	<nav class="nav-bar-static">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 logo"><a href=""><h1>DEY</h1></a></div>
+				<div class="col-md-7">
+					<div class="main-nav">
+						<ul class="nav nav-pills nav-justified">
+							<li><a href="#products">Products</a></li>
+							<li><a href="#quality">Quality</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</nav>
+
 	<section class="section-hero">
+		<div class="arrow-down arrow-light"></div>
 		<div class="container">
 			<div class="subheader text-center">
 				<h1>Your quality Squeegee Supplier</h1>
@@ -78,16 +78,16 @@
 		</div>
 		<div class="arrow2"></div>
 	</section>
-	<section>
+
+	<section id="products">
 		<div class="arrow2"></div>
-		<span class="anchor" id="products"></span>
 		<div class="container">
 			<div class="subheader text-center">
 				<h1><?php echo $xml->$lang->products->title; ?></h1>
 			</div>
 			<p><?php echo $xml->$lang->products->text[0]; ?></p>
 			<p><?php echo $xml->$lang->products->text[1]; ?></p>
-			<div class="table-responsive">
+			<div class="table-responsive table-products">
 				<table class="table">
 					<thead>
 						<tr>
@@ -137,8 +137,8 @@
 			</div>
 		</div>
 	</section>
-	<section>
-		<span class="anchor" id="quality"></span>
+
+	<section id="quality">
 		<div class="container">
 			<div class="subheader text-center">
 				<h1><span><?php echo $xml->$lang->quality->title; ?></span></h1>
@@ -146,8 +146,8 @@
 			<p><?php echo $xml->$lang->quality->text; ?></p>
 		</div>
 	</section>
-	<section class="section-about">
-		<span class="anchor" id="about"></span>
+
+	<section id="about" class="section-about">
 		<div class="arrow2"></div>
 		<div class="arrow-down"></div>
 		<div class="container">
@@ -162,8 +162,8 @@
 			</div>
 		</div>
 	</section>
-	<section>
-		<span class="anchor" id="contact"></span>
+
+	<section id="contact">
 		<div class="container">
 			<div class="subheader text-center">
 				<h1>Contact</h1>
@@ -224,12 +224,12 @@
 								<?php if($msgErr) {echo '<p class="text-danger">Message field is empty or invalid.</p>';} ?>
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- CAPATCHA OFF <div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<div class="g-recaptcha" data-sitekey="6LfJ0QkUAAAAAJ9fJ7NV7n0CotE6U411Rld2Bkli"></div>
 								<?php if($capErr) {echo '<p class="text-danger">Didnt pass capatcha.</p>';} ?>
 							</div>
-						</div>
+						</div>-->
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button type="submit" name="submit" class="btn btn-light"><span>Submit</span></button>
