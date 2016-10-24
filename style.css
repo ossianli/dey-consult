@@ -87,7 +87,7 @@ body.dey {
   border: 0px;
 }
 .nav-bar-lang .lang-drop .btn:hover {
-  background-color: #eee;
+  background-color: transparent;
 }
 .nav-bar-lang .lang-drop .btn:after {
   display: none;
@@ -272,6 +272,7 @@ section .arrow-wrap {
   max-width: 700px;
   color: #fff;
   background-color: rgba(51, 122, 183, 0.8);
+  position: relative;
 }
 /* Specifics */
 .section-hero {
