@@ -34,7 +34,8 @@
   						<ul class="dropdown-menu lang-selection">
   							<?php
   								foreach($xml->children() as $child) {
-  									echo '<li><a href="?l=' . $child->getName() . '"><img width="16px" height="16px" src="i/' . $child->getName() . '.png"></a></li>';
+  									if(!($child->getName() == $lang))
+  										echo '<li><a href="?l=' . $child->getName() . '"><img width="16px" height="16px" src="i/' . $child->getName() . '.png"></a></li>';
   								}
   							?>
   						</ul>
