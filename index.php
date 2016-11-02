@@ -16,8 +16,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-	<link rel="import" href="imports.html">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="f/stylesheet.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="components.js"></script>
 	<title>DEY</title>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
